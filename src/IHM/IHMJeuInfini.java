@@ -2,6 +2,7 @@ package IHM;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -12,6 +13,7 @@ import java.util.EventObject;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import Others.Outils;
@@ -28,7 +30,9 @@ public class IHMJeuInfini extends FenetreAbstraite implements ActionListener{
 	private int alea = o.getIntListAlea();
 	private String question = o.question(alea);
 	private ImageIcon image = o.getImageAlea(alea);
+	private JLabel panel;
 	String mot="";
+	
 	/**
 	 * 
 	 */
@@ -44,19 +48,22 @@ public class IHMJeuInfini extends FenetreAbstraite implements ActionListener{
 	 */
 	protected void init() {
 		//Genère une question :
-
+		//setLayout(new FlowLayout());
 		lb1 = new JTextArea ("Appuyez sur Entree pour debuter");
 		lb1.setLineWrap(true);
 		lb1.setEditable(false);
 		lb1.setFont(new Font("Georgia",1,80));
 		this.add(lb1,BorderLayout.NORTH);
-
+		
+		CompteRebours chrono = new CompteRebours(111);
+		this.add(chrono,BorderLayout.CENTER);
+		
 		ImageIcon icon = new ImageIcon("../ressources/images/france.jpg");
 		String texte = ("");
 		jl2 = new JLabel(texte,icon,JLabel.CENTER);
 		jl2.setFont(new Font("Georgia",1,50));
 		this.add(jl2);
-
+		
 
 		lb2 = new JTextArea ("");
 		lb2.setLineWrap(true);
