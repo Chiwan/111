@@ -131,7 +131,7 @@ public class CompteRebours extends JPanel implements Runnable{
 		this.temps = temps;
 	}
 
-/*
+
 
 	public static void main(String[] args){
 		JFrame f = new JFrame("Test du compte à rebours");
@@ -143,6 +143,6 @@ public class CompteRebours extends JPanel implements Runnable{
 		c.run();
 
 	}
-	*/
+	
 	
 }
