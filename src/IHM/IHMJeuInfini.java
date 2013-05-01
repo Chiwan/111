@@ -99,20 +99,22 @@ public class IHMJeuInfini extends FenetreAbstraite implements ActionListener{
 					lb1.setText(question);
 					voix.playText(question);
 
-					String answer = lb2.getText();
+					String answer = lb2.getText().trim();
 					jl2.setIcon(image);
+					System.out.println("Answer : "+answer.toUpperCase());
+					System.out.println("o.getListeAlea(aleaTmp)"+o.getListeAlea(aleaTmp));
 
 					if(o.findWord(o.getListeAlea(aleaTmp),answer.toUpperCase(), charTmp)){
 						//String text =  questionTmp + "\n" + 	"  Réponse vraie : "+ answer;
-						String text = "<html>"+ questionTmp + "<br> Réponse vraie :" + answer +"</html>";
+						String text = "<html>"+ questionTmp + "<br> Réponse vraie : " + answer +"</html>";
 						jl2.setText(text);
 					}
 					else{
-						String text = "<html>"+ questionTmp + "<br> Réponse fausse :" + o.correctAnswerAlea(o.getListeAlea(aleaTmp), charTmp) +"</html>";
+						String text = "<html>"+ questionTmp + "<br> Réponse fausse <br> Une réponse possible était : " + o.correctAnswerAlea(o.getListeAlea(aleaTmp), charTmp) +"</html>";
 						jl2.setText(text);
 					}
 					
-					lb2.setText("");	
+					lb2.setText(null);	
 
 				}
 			}
@@ -161,18 +163,17 @@ public class IHMJeuInfini extends FenetreAbstraite implements ActionListener{
 				jl2.setText(text);
 			}
 			else{
-				String text = "<html>"+ questionTmp + "<br> Réponse fausse :" + o.correctAnswerAlea(o.getListeAlea(aleaTmp), charTmp) +"</html>";
+				String text = "<html>"+ questionTmp + "<br> Réponse fausse <br> Une réponse possible était" + o.correctAnswerAlea(o.getListeAlea(aleaTmp), charTmp) +"</html>";
 				jl2.setText(text);
 			}
 			
-			lb2.setText("");
+			lb2.setText(null);
 			break;				
 
-		default:
-			mot=mot+e.getKeyChar();
-			//mot=textField.getText();
-			//break;
+		
 
+		
+		
 		}
 	}	
 
