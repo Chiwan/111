@@ -217,10 +217,9 @@ public class Outils {
 			return true;
 		}
 		
-		else return false;
 		
 		
-		/*
+		
 		//Prends en compte le mot le plus long
 		int nbReference;
 		if (motReference.length() > motTape.length()) {
@@ -243,7 +242,7 @@ public class Outils {
 		else {
 			return false;
 		}
-		*/
+		
 	}
 	
 //	public String convertSansAccent(String s) {
