@@ -151,6 +151,9 @@ public class IHMJeuInfini extends FenetreAbstraite implements ActionListener{
 			voix.playText(question);
 			String answer = lb2.getText();
 			jl2.setIcon(image);
+			System.out.println("Answer"+answer.toUpperCase());
+			System.out.println("o.getListeAlea(aleaTmp)"+o.getListeAlea(aleaTmp));
+
 			
 			if(o.findWord(o.getListeAlea(aleaTmp),answer.toUpperCase(), charTmp)){
 				//String text =  questionTmp + "\n" + 	"  Réponse vraie : "+ answer;

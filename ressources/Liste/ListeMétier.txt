@@ -529,12 +529,12 @@ Testeur
 Thanatopracteur
 Trader
 Traducteur
-Traiteur 
+Traiteur
 Traiteur
 Transporteur
 Trésorier 
 Trésorier
-Typographe 
+Typographe
 Typographe 
 Vendeur 
 Vendeur
@@ -544,4 +544,4 @@ Vitrier
 Voyageur représentant placier
 Webdesigner
 Webmarketer 
-Webmestre 
+Webmestre

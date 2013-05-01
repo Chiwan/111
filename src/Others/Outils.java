@@ -170,6 +170,8 @@ public class Outils {
 		}
 		for(int i =0; i< array.size();i++){		
 			if(motMalTape(array.get(i).toUpperCase(),mot.toUpperCase())){
+				System.out.println(array.get(i).toUpperCase());
+				System.out.println(mot.toUpperCase());
 				return true;
 			}
 		}
@@ -309,7 +311,7 @@ public class Outils {
 			br = new BufferedReader(ipsr);
 			String ligne;
 			while ((ligne = br.readLine()) != null) {
-				liste.add(ligne);
+				liste.add(ligne.trim().toUpperCase());
 
 			}
 			br.close();
